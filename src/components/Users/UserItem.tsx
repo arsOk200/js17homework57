@@ -10,9 +10,11 @@ interface Props {
 const UserItem:React.FC<Props> = ({user}) => {
 
   let booleanCheck:string = 'no';
+  let booleanCheckCss:string = 'text-danger'
 
   if(user.isActive) {
     booleanCheck = 'Yes';
+    booleanCheckCss = 'text-success'
   }
 
 
@@ -22,7 +24,7 @@ const UserItem:React.FC<Props> = ({user}) => {
       <div className="card-body text-dark">
         <h5 className="card-title">Name: {user.name}</h5>
         <p className="card-text">Email: {user.email}</p>
-        <p className="card-text">Active: {booleanCheck}</p>
+        <p className={'card-text '+ booleanCheckCss}>Active: {booleanCheck}</p>
       </div>
     </div>
   );

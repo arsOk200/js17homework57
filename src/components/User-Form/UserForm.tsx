@@ -33,7 +33,7 @@ const UserForm:React.FC<Props> = ({onSubmit}) => {
     setUser(prev => ({...prev, [name]: checked}));
   };
   return (
-    <form onSubmit={onFormSubmit} >
+    <form onSubmit={onFormSubmit}  className='d-flex flex-column '>
       <h2>Add new user</h2>
       <div className="form-group mb-3">
         <label htmlFor="name">Your name</label>
@@ -43,9 +43,9 @@ const UserForm:React.FC<Props> = ({onSubmit}) => {
         <label htmlFor="email">Your email</label>
         <input required id='email' name='email' type="email" className="form-control" value={user.email} onChange={onUserChange}/>
       </div>
-      <div className="form-group mb-3">
+      <div className="form-group mb-3 ">
         <label className='me-1' >Active</label>
-        <input id='checkbox' name='isActive' type="checkbox"  checked={user.isActive} onChange={onUserCheckboxChange}/>
+        <input id='checkbox'  name='isActive' type="checkbox"  checked={user.isActive} onChange={onUserCheckboxChange}/>
       </div>
       <div className="form-group mb-3">
         <label>Your role: </label>

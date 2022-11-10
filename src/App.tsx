@@ -11,7 +11,7 @@ function App() {
     setUsers(prev => [...prev, newUser]);
   };
   return (
-    <div className="container-fluid">
+    <div className="container-fluid mt-4">
       <div className="row">
         <div className="col">
           <UserForm onSubmit={addUser}/>
